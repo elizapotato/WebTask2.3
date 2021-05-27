@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Hello Quiz";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <form id="input_form">
+            <h2>Quiz</h2>
+
+            <div>
+                <input name="value1" class="form-control "
+                       style="display: none" value="@ViewBag.num1"/>
+                <input name="operation" class="form-control "
+                       style="display: none" value="@ViewBag.operation"/>
+
+                <input name="value2" class="form-control "
+                       style="display: none" value="@ViewBag.num2"/>
+            </div>
+
+            <b>@ViewBag.num1 @ViewBag.operation @ViewBag.num2 =</b>
+
+
+            <input name="answer" class="form-control"/>
+            <br/>
+            <div class="buttons" id="dat">
+                <button formmethod="post" formaction="~/Mockup/Next" type="submit"
+                        class="btn btn-light col-md">
+                    Next
+                </button>
+                <button formmethod="post" formaction="~/Mockup/Result" type="submit"
+                        class="btn btn-primary col-md">
+                    Finish
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
